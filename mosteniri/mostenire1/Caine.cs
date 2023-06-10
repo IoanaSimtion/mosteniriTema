@@ -16,6 +16,15 @@ namespace mosteniri.mostenire1
 
         }
 
+        public Caine(string properties) : base(properties)
+        {
+            string[] propr = properties.Split(",");
+
+            this.rasa=propr[4];
+            this.pret = Int32.Parse(propr[5]);
+
+        }
+
         public Caine(string rasa, int pret)
         {
             this.rasa = rasa;
@@ -32,6 +41,16 @@ namespace mosteniri.mostenire1
         {
             get { return pret; }
             set { pret = value; }
+        }
+
+        public string descriereCaine()
+        {
+            string text = base.descriereAnimal();
+
+            text += "Rasa caine: " + this.rasa + "\n";
+            text += "Pret caine: " + this.pret + "\n";
+
+            return text;
         }
     }
 }

@@ -17,6 +17,14 @@ namespace mosteniri.mostenire1
             this.varsta = varsta;
         }
 
+        public Urs(string properties): base(properties)
+        {
+            string[] propr = properties.Split(",");
+
+            this.tip= propr[4];
+            this.varsta = Int32.Parse(propr[5]);
+        }
+
         public string Tip
         {
             get { return tip; }
@@ -27,6 +35,16 @@ namespace mosteniri.mostenire1
         {
             get { return varsta; }
             set { varsta = value; }
+        }
+
+        public string descriereUrs()
+        {
+            string text = base.descriereAnimal();
+
+            text += "Tip urs: " + this.tip + "\n";
+            text += "Varsta: " + this.varsta.ToString() + "\n";
+
+            return text;
         }
     }
 }

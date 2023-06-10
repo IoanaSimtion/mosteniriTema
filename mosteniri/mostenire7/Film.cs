@@ -16,7 +16,14 @@ namespace mosteniri.mostenire7
         {
 
         }
+        public Film(string properties)
+        {
+            string[] propr = properties.Split(",");
 
+            this.nume = propr[1];
+            this.an = Int32.Parse(propr[2]);
+            this.regizor = propr[3];
+        }
         public Film(string nume, int an, string regizor)
         {
             this.nume = nume;
@@ -40,6 +47,17 @@ namespace mosteniri.mostenire7
         {
             get { return this.regizor; }
             set { this.regizor = value; }
+        }
+
+        public string descriereFilm()
+        {
+            string text = "";
+
+            text += "Nume: " + this.nume + "\n";
+            text += "An: " + this.an.ToString() + "\n";
+            text += "Regizor: " + this.regizor.ToString() + "\n";
+
+            return text;
         }
     }
 }

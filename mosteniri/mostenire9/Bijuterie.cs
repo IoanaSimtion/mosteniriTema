@@ -24,6 +24,14 @@ namespace mosteniri.mostenire9
             this.pret = pret;
         }
 
+        public Bijuterie(string properties)
+        {
+            string[] propr = properties.Split(",");
+
+            this.material = propr[1];
+            this.gramaj = Int32.Parse(propr[2]);
+            this.pret = Int32.Parse(propr[3]);
+        }
         public string Material
         {
             get { return this.material; }
@@ -40,6 +48,17 @@ namespace mosteniri.mostenire9
         {
             get { return this.pret; }
             set { this.pret = value; }
+        }
+
+        public string descriereBijuterie()
+        {
+            string text = "";
+
+            text += "Material: " + this.material + "\n";
+            text += "Gramaj: " + this.gramaj.ToString() + "\n";
+            text += "Pret: " + this.pret.ToString() + "\n";
+
+            return text;
         }
     }
 }

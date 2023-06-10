@@ -10,11 +10,16 @@ namespace mosteniri.mostenire7
     {
         private int durata;
 
-        public FilmActiune(int durata)
+        //public FilmActiune(int durata)
+        //{
+        //    this.durata = durata;
+        //}
+        public FilmActiune(string properties) : base(properties)
         {
-            this.durata = durata;
-        }
+            string[] propr = properties.Split(",");
 
+            this.durata = Int32.Parse(propr[4]);
+        }
         public FilmActiune()
         {
 
@@ -24,6 +29,15 @@ namespace mosteniri.mostenire7
         {
             get { return this.durata; }
             set { this.durata = value; }
+        }
+
+        public string descriereFilmActiune()
+        {
+            string text = base.descriereFilm();
+
+            text += "Durata film actiune: " + this.durata.ToString() + "\n";
+
+            return text;
         }
     }
 }

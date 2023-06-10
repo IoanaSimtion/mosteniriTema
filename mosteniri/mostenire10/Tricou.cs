@@ -15,15 +15,31 @@ namespace mosteniri.mostenire10
 
         }
 
-        public Tricou(string model)
+        //public Tricou(string model)
+        //{
+        //    this.model = model;
+        //}
+
+        public Tricou(string properties) : base(properties)
         {
-            this.model = model;
+            string[] propr = properties.Split(",");
+
+            this.model = propr[4];
         }
 
         public string Model
         {
             get { return this.model; }
             set { this.model = value; }
+        }
+
+        public string descriereTricou()
+        {
+            string text = base.descriereHaina();
+
+            text += "Model tricou: " + this.model + "\n";
+
+            return text;
         }
     }
 }

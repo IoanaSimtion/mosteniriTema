@@ -15,15 +15,30 @@ namespace mosteniri.mostenire9
 
         }
 
-        public Inel(string brand)
-        {
-            this.brand = brand;
-        }
+        //public Inel(string brand)
+        //{
+        //    this.brand = brand;
+        //}
 
+        public Inel(string properties) : base(properties)
+        {
+            string[] propr = properties.Split(",");
+
+            this.brand = propr[4];
+        }
         public string Brand
         {
             get { return this.brand; }
             set { this.brand = value; }
+        }
+
+        public string descriereInel()
+        {
+            string text = base.descriereBijuterie();
+
+            text += "Cod inel: " + this.GetHashCode + "\n";
+
+            return text;
         }
     }
 }

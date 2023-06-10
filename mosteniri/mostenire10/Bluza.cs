@@ -10,20 +10,36 @@ namespace mosteniri.mostenire10
     {
         private string culoare;
 
-        public Bluza(string culoare)
-        {
-            this.culoare = culoare;
-        }
+        //public Bluza(string culoare)
+        //{
+        //    this.culoare = culoare;
+        //}
 
         public Bluza()
         {
 
         }
 
+        public Bluza(string properties) : base(properties)
+        {
+            string[] propr = properties.Split(",");
+
+            this.culoare = propr[4];
+        }
+
         public string Culoare
         {
             get { return this.culoare; }
             set { this.culoare = value; }
+        }
+
+        public string descriereBluza()
+        {
+            string text = base.descriereHaina();
+
+            text += "Culoare bluza: " + this.culoare + "\n";
+
+            return text;
         }
     }
 }
