@@ -25,6 +25,15 @@ namespace mosteniri.mostenire1
             this.mediuDeViata = mediu;
         }
 
+        public Animal(string properties)
+        {
+            string[] propr = properties.Split(",");
+
+            this.grupa=propr[1];
+            this.greutate = Int32.Parse(propr[2]);
+            this.mediuDeViata = propr[3];
+        }
+
         public string Grupa
         {
             get { return this.grupa; }
@@ -41,6 +50,17 @@ namespace mosteniri.mostenire1
         {
             get { return this.mediuDeViata; }
             set { this.mediuDeViata = value; }
+        }
+
+        public string descriereAnimal()
+        {
+            string text = "";
+
+            text += "Grupa: " + this.grupa + "\n";
+            text += "Greutate: " + this.greutate + "\n";
+            text += "Mediu de viata: " + this.mediuDeViata + "\n";
+
+            return text;
         }
     }
 }

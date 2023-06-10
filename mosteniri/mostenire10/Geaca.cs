@@ -15,15 +15,32 @@ namespace mosteniri.mostenire10
 
         }
 
-        public Geaca(int greutate)
+        //public Geaca(int greutate)
+        //{
+        //    this.greutate = greutate;
+        //}
+
+        public Geaca(string properties) : base(properties)
         {
-            this.greutate = greutate;
+            string[] propr = properties.Split(",");
+
+            this.greutate = Int32.Parse(propr[4]);
+
         }
 
         public int Greutate
         {
             get { return this.greutate; }
             set { this.greutate = value; }
+        }
+
+        public string descriereGeaca()
+        {
+            string text = base.descriereHaina();
+
+            text += "Greutate gecaca: " + this.greutate.ToString() + "\n";
+
+            return text;
         }
     }
 }

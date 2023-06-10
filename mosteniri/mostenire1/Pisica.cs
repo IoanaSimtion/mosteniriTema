@@ -22,6 +22,14 @@ namespace mosteniri.mostenire1
 
         }
 
+        public Pisica(string properties) : base(properties)
+        {
+            string[] propr = properties.Split(",");
+
+            this.rasaPisica = propr[4];
+            this.culoareBlana = propr[5];
+        }
+
         public string RasaPisica
         {
             get { return rasaPisica; }
@@ -32,6 +40,16 @@ namespace mosteniri.mostenire1
         {
             get { return culoareBlana; }
             set { culoareBlana = value; }
+        }
+
+        public string descrierePisica()
+        {
+            string text = base.descriereAnimal();
+
+            text += "Rasa pisica: " + this.rasaPisica + "\n";
+            text += "Culoare blana pisica: " + this.culoareBlana + "\n";
+
+            return text;
         }
     }
 }

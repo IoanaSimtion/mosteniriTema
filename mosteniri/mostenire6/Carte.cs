@@ -25,6 +25,14 @@ namespace mosteniri.mostenire6
             this.pret = pret;
         }
 
+        public Carte(string properties)
+        {
+            string[] propr=properties.Split(",");
+
+            this.autor = propr[1];
+            this.an = Int32.Parse(propr[2]);
+            this.pret = Int32.Parse(propr[3]);
+        }
         public string Autor
         {
             get { return this.autor; }
@@ -41,6 +49,17 @@ namespace mosteniri.mostenire6
         {
             get { return this.pret; }
             set { this.pret = value; }
+        }
+
+        public string descriereCarte()
+        {
+            string text = "";
+
+            text += "Autor: " + this.autor + "\n";
+            text += "An: " + this.an.ToString() + "\n";
+            text += "Pret: " + this.pret.ToString() + "\n";
+
+            return text;
         }
 
     }

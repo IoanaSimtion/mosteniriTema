@@ -15,15 +15,31 @@ namespace mosteniri.mostenire6
 
         }
 
-        public CarteClasica(string tipCoperta)
+        //public CarteClasica(string tipCoperta)
+        //{
+        //    this.tipCoperta = tipCoperta;
+        //}
+
+        public CarteClasica(string properties) : base(properties)
         {
-            this.tipCoperta = tipCoperta;
+            string[] propr=properties.Split(",");
+
+            this.tipCoperta = propr[4];
         }
 
         public string TipCoperta
         {
             get { return this.tipCoperta; }
             set { this.tipCoperta = value; }
+        }
+
+        public string descriereCarteClasica()
+        {
+            string text = base.descriereCarte();
+
+            text += "Tip coperta carte clasica: " + this.tipCoperta + "\n";
+
+            return text;
         }
     }
 }

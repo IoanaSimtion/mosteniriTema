@@ -19,11 +19,25 @@ namespace mosteniri.mostenire9
         {
 
         }
+        public Colier(string properties) : base(properties)
+        {
+            string[] propr = properties.Split(",");
 
+            this.lungime = Int32.Parse(propr[4]);
+        }
         public int Lungime
         {
             get { return this.lungime; }
             set { this.lungime = value; }
+        }
+
+        public string descriereColier()
+        {
+            string text = base.descriereBijuterie();
+
+            text += "Lungime colier: " + this.lungime + "\n";
+
+            return text;
         }
     }
 }

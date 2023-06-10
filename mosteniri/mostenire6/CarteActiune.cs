@@ -10,11 +10,17 @@ namespace mosteniri.mostenire6
     {
         private string nume;
 
-        public CarteActiune(string nume)
-        {
-            this.nume = nume;
-        }
+        //public CarteActiune(string nume)
+        //{
+        //    this.nume = nume;
+        //}
 
+        public CarteActiune(string properties) : base(properties)
+        {
+            string[] propr=properties.Split(",");
+
+            this.nume=propr[4];
+        }
         public CarteActiune()
         {
 
@@ -24,6 +30,15 @@ namespace mosteniri.mostenire6
         {
             get { return this.nume; }
             set { this.nume = value; }
+        }
+
+        public string descriereCarteActiune()
+        {
+            string text = base.descriereCarte();
+
+            text += "Nume carte actiune: " + this.nume + "\n";
+
+            return text;
         }
     }
 }

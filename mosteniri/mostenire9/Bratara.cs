@@ -15,15 +15,31 @@ namespace mosteniri.mostenire9
 
         }
 
-        public Bratara(string cod)
+        //public Bratara(string cod)
+        //{
+        //    this.cod = cod;
+        //}
+
+        public Bratara(string properties) : base(properties)
         {
-            this.cod = cod;
+            string[] propr = properties.Split(",");
+
+            this.cod = propr[4];
         }
 
         public string Cod
         {
             get { return this.cod; }
             set { this.cod = value; }
+        }
+
+        public string descriereBratara()
+        {
+            string text = base.descriereBijuterie();
+
+            text += "Cod bratara: " + this.cod + "\n";
+
+            return text;
         }
     }
 }

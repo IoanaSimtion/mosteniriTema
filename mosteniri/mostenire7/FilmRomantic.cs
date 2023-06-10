@@ -19,10 +19,26 @@ namespace mosteniri.mostenire7
             this.vizionari = vizionari;
         }
 
+        public FilmRomantic(string properties) : base(properties)
+        {
+            string[] propr = properties.Split(",");
+
+            this.vizionari = Int32.Parse(propr[4]);
+        }
+
         public int Vizionari
         {
             get { return this.vizionari; }
             set { this.vizionari = value; }
+        }
+
+        public string descriereFilmRomantic()
+        {
+            string text = base.descriereFilm();
+
+            text += "Vizionari film romantic: " + this.vizionari.ToString() + "\n";
+
+            return text;
         }
     }
 }

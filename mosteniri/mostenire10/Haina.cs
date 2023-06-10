@@ -24,6 +24,14 @@ namespace mosteniri.mostenire10
 
         }
 
+        public Haina(string properties)
+        {
+            string[] propr = properties.Split(",");
+
+            this.material = propr[1]; 
+            this.brand = propr[2];
+            this.pret = Int32.Parse(propr[3]);
+        }
         public string Material
         {
             get { return this.material; }
@@ -40,6 +48,17 @@ namespace mosteniri.mostenire10
         {
             get { return this.pret; }
             set { this.pret = value; }
+        }
+
+        public string descriereHaina()
+        {
+            string text = "";
+
+            text += "Material: " + this.material + "\n";
+            text+="Brand: "+this.brand + "\n";
+            text += "Pret: " + this.pret.ToString() + "\n";
+
+            return text;
         }
     }
 }
