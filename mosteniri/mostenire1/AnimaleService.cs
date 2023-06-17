@@ -48,19 +48,19 @@ namespace mosteniri.mostenire1
                 {
                     Caine caine = (Caine)animale[i];
 
-                    Debug.WriteLine(caine.descriereCaine());
+                    Debug.WriteLine(caine.ToString());
                 }
                 if(animale[i] is Pisica)
                 {
                     Pisica pisica = (Pisica)animale[i];
 
-                    Debug.WriteLine(pisica.descrierePisica());
+                    Debug.WriteLine(pisica.ToString());
                 }
                 if (animale[i] is Urs)
                 {
                     Urs urs = (Urs)animale[i];
 
-                    Debug.WriteLine(urs.descriereUrs());
+                    Debug.WriteLine(urs.ToString());
                 }
             }
         }

@@ -33,9 +33,9 @@ namespace mosteniri.mostenire10
             set { this.model = value; }
         }
 
-        public string descriereTricou()
+        public override string ToString()
         {
-            string text = base.descriereHaina();
+            string text = base.ToString();
 
             text += "Model tricou: " + this.model + "\n";
 

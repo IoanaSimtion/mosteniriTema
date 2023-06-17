@@ -50,7 +50,7 @@ namespace mosteniri.mostenire9
             set { this.pret = value; }
         }
 
-        public string descriereBijuterie()
+        public override string ToString()
         {
             string text = "";
 

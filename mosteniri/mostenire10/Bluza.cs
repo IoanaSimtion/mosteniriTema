@@ -33,9 +33,9 @@ namespace mosteniri.mostenire10
             set { this.culoare = value; }
         }
 
-        public string descriereBluza()
+        public override string ToString()
         {
-            string text = base.descriereHaina();
+            string text = base.ToString();
 
             text += "Culoare bluza: " + this.culoare + "\n";
 

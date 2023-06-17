@@ -43,9 +43,9 @@ namespace mosteniri.mostenire1
             set { pret = value; }
         }
 
-        public string descriereCaine()
+        public override string ToString()
         {
-            string text = base.descriereAnimal();
+            string text = base.ToString();
 
             text += "Rasa caine: " + this.rasa + "\n";
             text += "Pret caine: " + this.pret + "\n";

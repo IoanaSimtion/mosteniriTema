@@ -32,11 +32,11 @@ namespace mosteniri.mostenire9
             set { this.brand = value; }
         }
 
-        public string descriereInel()
+        public override string ToString()
         {
-            string text = base.descriereBijuterie();
+            string text = base.ToString();
 
-            text += "Cod inel: " + this.GetHashCode + "\n";
+            text += "Brand inel: " + this.brand + "\n";
 
             return text;
         }

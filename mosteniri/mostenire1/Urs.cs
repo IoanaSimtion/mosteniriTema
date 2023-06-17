@@ -37,9 +37,9 @@ namespace mosteniri.mostenire1
             set { varsta = value; }
         }
 
-        public string descriereUrs()
+        public override string ToString()
         {
-            string text = base.descriereAnimal();
+            string text = base.ToString();
 
             text += "Tip urs: " + this.tip + "\n";
             text += "Varsta: " + this.varsta.ToString() + "\n";

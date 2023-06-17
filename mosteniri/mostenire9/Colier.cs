@@ -31,9 +31,9 @@ namespace mosteniri.mostenire9
             set { this.lungime = value; }
         }
 
-        public string descriereColier()
+        public override string ToString()
         {
-            string text = base.descriereBijuterie();
+            string text = base.ToString();
 
             text += "Lungime colier: " + this.lungime + "\n";
 

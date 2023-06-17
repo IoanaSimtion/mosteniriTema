@@ -42,9 +42,9 @@ namespace mosteniri.mostenire1
             set { culoareBlana = value; }
         }
 
-        public string descrierePisica()
+        public override string ToString()
         {
-            string text = base.descriereAnimal();
+            string text = base.ToString();
 
             text += "Rasa pisica: " + this.rasaPisica + "\n";
             text += "Culoare blana pisica: " + this.culoareBlana + "\n";

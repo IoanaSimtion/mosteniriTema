@@ -52,7 +52,7 @@ namespace mosteniri.mostenire1
             set { this.mediuDeViata = value; }
         }
 
-        public string descriereAnimal()
+        public override string ToString()
         {
             string text = "";
 

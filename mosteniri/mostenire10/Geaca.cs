@@ -34,9 +34,9 @@ namespace mosteniri.mostenire10
             set { this.greutate = value; }
         }
 
-        public string descriereGeaca()
+        public override string ToString()
         {
-            string text = base.descriereHaina();
+            string text = base.ToString();
 
             text += "Greutate gecaca: " + this.greutate.ToString() + "\n";
 

@@ -50,7 +50,7 @@ namespace mosteniri.mostenire10
             set { this.pret = value; }
         }
 
-        public string descriereHaina()
+        public override string ToString()
         {
             string text = "";
 

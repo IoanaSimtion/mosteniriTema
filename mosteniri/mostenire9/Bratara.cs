@@ -33,9 +33,9 @@ namespace mosteniri.mostenire9
             set { this.cod = value; }
         }
 
-        public string descriereBratara()
+        public override string ToString()
         {
-            string text = base.descriereBijuterie();
+            string text = base.ToString();
 
             text += "Cod bratara: " + this.cod + "\n";
 

@@ -46,20 +46,20 @@ namespace mosteniri.mostenire10
                 {
                     Tricou tricou= (Tricou)haine[i];
 
-                    Debug.WriteLine(tricou.descriereTricou());
+                    Debug.WriteLine(tricou.ToString());
 
                 }
                 if(haine[i] is Geaca)
                 {
                     Geaca geaca= (Geaca)haine[i];
 
-                    Debug.WriteLine(geaca.descriereGeaca());
+                    Debug.WriteLine(geaca.ToString());
                 }
                 if (haine[i] is Bluza)
                 {
                     Bluza bluza= (Bluza)haine[i];
 
-                    Debug.WriteLine(bluza.descriereBluza());
+                    Debug.WriteLine(bluza.ToString());
                 }
             }
         }

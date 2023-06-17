@@ -49,19 +49,19 @@ namespace mosteniri.mostenire9
                 {
                     Bratara bratara = (Bratara)bijuterii[i];
 
-                    Debug.WriteLine(bratara.descriereBratara());
+                    Debug.WriteLine(bratara.ToString());
                 }
                 if (bijuterii[i] is Colier)
                 {
                     Colier colier = (Colier)bijuterii[i];
 
-                    Debug.WriteLine(colier.descriereColier());
+                    Debug.WriteLine(colier.ToString());
                 }
                 if (bijuterii[i] is Inel)
                 {
                     Inel inel = (Inel)bijuterii[i];
 
-                    Debug.WriteLine(inel.descriereInel());
+                    Debug.WriteLine(inel.ToString());
                 }
             }
         }
